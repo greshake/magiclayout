@@ -1,3 +1,5 @@
+Code is on the **[prototype branch](https://github.com/greshake/magiclayout/tree/prototype)** right now
+
 # magiclayout
 Repetitively arranging windows on a tiling WM is annoying. No more! Install one binary to give your WM a brain. 
 
