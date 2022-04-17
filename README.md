@@ -14,11 +14,21 @@ When you make changes to your window layout, your WM should remember the setup a
 magiclayout runs in the background and observes your WM usage over the IPC API. When you open or close windows, move windows between workspaces or move workspaces to different outputs magiclayout will look for a matching layout that has been seen on that output/workspace before, and apply it. Whenever you actually intentionally make a change such as resizing containers, changing orientations or moving them, magiclayout will take a snapshot of that layout on the current workspace and output. The resulting layout will be assigned a hash and stored in a database.
 The database persists even between reboots and keeps growing with you. At any time you can reset the database, or enable/disable magiclayout while your WM is running.
 
+# Known Problems with the prototype
+- Every time you make a change, it serializes and writes the whole "database" to disk. Yikes. 
+- It struggles with a lot of windows (maybe over ten or 20?). It might be glitchy and crash in those cases.
+- It struggles with very fast inputs. It will sometimes crash because it is still transforming a layout when unexpected changes from the user disturb it. Not to worry, the start_magic script simply reboots it in a loop...
+- You don't want to have a Python script running in the background, right? The actual program will be a single Rust binary most likely.
+- The layout restore over IPC commands is unreliably implemented (see restore.py for my elaboration on why it's horrible). It still somehow manages my use cases.
+
+I already have a good grasp on how to fix all of these known issues in the main project. Please let me know about anything else though, implementation related or conceptually.
+
 # Running magiclayout
 1. Clone this repository: `git clone git@github.com:greshake/magiclayout.git`
 2. Ensure you are running at least Python 3.10: `python --version`
 3. Install the dependencies (might be pip3 for your distro): `pip install -r requirements.txt`
 4. For debugging and testing, run `python src/magiclayout.py magic [--db=<path>]`
+5. Your tiling WM has now been retrofitted with a simple, deterministic brain. Congratulations!
 
 # Brave supporters
 If you like magiclayout and the prototype works for you, 
