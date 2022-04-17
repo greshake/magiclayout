@@ -55,7 +55,8 @@ if __name__ == '__main__':
 
     elif arguments['magic']:
         # The database stores the different seen layouts per workspace and per app signature.
-        db_file = arguments['--db'] or 'database.json'
+        import os
+        db_file = os.path.expanduser(arguments['--db']) or 'database.json'
         # Read the database
         # if the file is empty, create a new file
         if not os.path.exists(db_file):

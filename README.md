@@ -4,7 +4,7 @@ Repetitively arranging windows on a tiling WM is annoying. No more! Install one 
 Prototype supports Sway and potentially i3 (untested).
 
 **This is proof-of-concept-level software.**
-If you really would like to give it a try please have a look at the prototype branch. The prototype is written in Python and will hog your resources unreasonably, so use it for testing only. It works on my daily driver as of right now, but it may break anytime. If you want to contribute to the development of the main project please give me feedback on the higher-level features, options and extensions you want to see. I'm particularly interested how it affects your workflow, and in what cases you find it more disruptive then helpful. Or tell me which WMs and platforms you would like to see supported or implement yourself. The prototype code is horrible and will be incinerated as soon as feasible. When I think I have a good grasp on the real-world usage for the prototype, I'll build the main project in Rust.
+The prototype is written in Python and will hog your resources unreasonably, so use it for testing only. It works on my daily driver as of right now, but it may break anytime. If you want to contribute to the development of the main project please give me feedback on the higher-level features, options and extensions you want to see. I'm particularly interested how it affects your workflow, and in what cases you find it more disruptive then helpful. Or tell me which WMs and platforms you would like to see supported or implement yourself. The prototype code is horrible and will be incinerated as soon as feasible. When I think I have a good grasp on the real-world usage for the prototype, I'll build the main project in Rust.
 
 
 # General Idea

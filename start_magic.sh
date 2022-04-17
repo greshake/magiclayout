@@ -8,8 +8,6 @@ if [ -f venv/bin/activate ]; then
     source venv/bin/activate
 fi
 
-# Start the magic
-
 # Restart if it dies
 while true; do
     python src/magiclayout.py magic --db=~/.config/magiclayout.db
