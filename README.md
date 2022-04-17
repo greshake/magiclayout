@@ -10,6 +10,8 @@ The prototype is written in Python and will hog your resources unreasonably, so 
 # General Idea
 When you make changes to your window layout, your WM should remember the setup and apply it the next time automatically, without any configuration. It should be capable of learning from your everyday usage and make you more productive!
 
+Also: User intervention is the metric to use. Whenever the user makes an intentional change, make sure it is persistent and never 'fight' the user.
+
 # How does it work?
 magiclayout runs in the background and observes your WM usage over the IPC API. When you open or close windows, move windows between workspaces or move workspaces to different outputs magiclayout will look for a matching layout that has been seen on that output/workspace before, and apply it. Whenever you actually intentionally make a change such as resizing containers, changing orientations or moving them, magiclayout will take a snapshot of that layout on the current workspace and output. The resulting layout will be assigned a hash and stored in a database.
 The database persists even between reboots and keeps growing with you. At any time you can reset the database, or enable/disable magiclayout while your WM is running.
