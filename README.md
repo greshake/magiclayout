@@ -24,7 +24,7 @@ The database persists even between reboots and keeps growing with you. At any ti
 I already have a good grasp on how to fix all of these known issues in the main project. Please let me know about anything else though, implementation related or conceptually.
 
 # Running magiclayout
-1. Clone this repository: `git clone git@github.com:greshake/magiclayout.git`
+1. Clone this repository: `git clone -b prototype git@github.com:greshake/magiclayout.git`
 2. Ensure you are running at least Python 3.10: `python --version`
 3. Install the dependencies (might be pip3 for your distro): `pip install -r requirements.txt`
 4. For debugging and testing, run `python src/magiclayout.py magic [--db=<path>]`
