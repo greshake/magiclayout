@@ -37,7 +37,7 @@ If you like magiclayout and the prototype works for you,
 all you need to do to use it in sway is adding the following line to 
 your sway/i3 config:
 ```
-exec --no-startup-id /path/to/magiclayout/startmagic.sh
+exec --no-startup-id /path/to/magiclayout/start_magic.sh
 ```
 The database is stored in `~/.config/magiclayout.db` by default. There is no other configuration.
 
